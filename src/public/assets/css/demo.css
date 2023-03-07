@@ -1,0 +1,301 @@
+/*
+* demo.css
+* File include item demo only specific css only
+******************************************************************************/
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #d8d8d8;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+body::-webkit-scrollbar-thumb {
+  border: 4px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+  border-radius: 9999px;
+  background-color: #c3c3c3;
+}
+
+.menu .app-brand.demo {
+  height: 64px;
+  margin-top: 12px;
+}
+
+.app-brand-logo.demo svg {
+  width: 22px;
+  height: 38px;
+}
+
+.app-brand-text.demo {
+  font-size: 1.2rem;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+}
+
+/* ! For .layout-navbar-fixed added fix padding top tpo .layout-page */
+/* Detached navbar */
+.layout-navbar-fixed .layout-wrapper:not(.layout-horizontal):not(.layout-without-menu) .layout-page {
+  padding-top: 76px !important;
+}
+
+/* Default navbar */
+.layout-navbar-fixed .layout-wrapper:not(.layout-without-menu) .layout-page {
+  padding-top: 64px !important;
+}
+
+/* Navbar page z-index issue solution */
+.content-wrapper .navbar {
+  z-index: auto;
+}
+
+/*
+* Content
+******************************************************************************/
+
+.demo-blocks>* {
+  display: block !important;
+}
+
+.demo-inline-spacing>* {
+  margin: 1rem 0.375rem 0 0 !important;
+}
+
+/* ? .demo-vertical-spacing class is used to have vertical margins between elements. To remove margin-top from the first-child, use .demo-only-element class with .demo-vertical-spacing class. For example, we have used this class in forms-input-groups.html file. */
+.demo-vertical-spacing>* {
+  margin-top: 1rem !important;
+  margin-bottom: 0 !important;
+}
+
+.demo-vertical-spacing.demo-only-element> :first-child {
+  margin-top: 0 !important;
+}
+
+.demo-vertical-spacing-lg>* {
+  margin-top: 1.875rem !important;
+  margin-bottom: 0 !important;
+}
+
+.demo-vertical-spacing-lg.demo-only-element> :first-child {
+  margin-top: 0 !important;
+}
+
+.demo-vertical-spacing-xl>* {
+  margin-top: 5rem !important;
+  margin-bottom: 0 !important;
+}
+
+.demo-vertical-spacing-xl.demo-only-element> :first-child {
+  margin-top: 0 !important;
+}
+
+.rtl-only {
+  display: none !important;
+  text-align: left !important;
+  direction: ltr !important;
+}
+
+[dir='rtl'] .rtl-only {
+  display: block !important;
+}
+
+/*
+* Layout demo
+******************************************************************************/
+
+.layout-demo-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.layout-demo-placeholder img {
+  width: 900px;
+}
+
+.layout-demo-info {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.error-message {
+  color: red;
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.rm-question-card {
+  position: relative;
+}
+
+.rm-question-card .question-count {
+  position: absolute;
+  left: 12px;
+  top: -12px;
+  padding: 3px 10px;
+  background-color: #c9a763;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* .rm-question-card::before {
+  content: url('../img/close.svg');
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #c9a763;
+  border-radius: 0px 5px 0px 10px;
+  padding: 3px;
+  height: 25px;
+  cursor: pointer;
+} */
+
+.rm-card-question-body {
+  padding: 1.5rem 0px;
+}
+
+
+.rm-card-question-body .card-title {
+  border-left: 4px solid #c9a763;
+  padding: 6px 1rem;
+}
+
+.rm-card-question-body .card-text::before {
+  content: "Answer : ";
+  font-weight: 600;
+  color: #c9a763;
+  font-size: 15px;
+  letter-spacing: 0.7px;
+}
+
+.rm-card-question-body .card-text {
+  padding: 3px 1.5rem;
+  font-size: 13px;
+}
+
+.rm-table-view-question-table thead {
+  background-color: #c9a763;
+}
+
+.rm-table-view-question-table thead>tr>th {
+  color: #fff !important;
+}
+
+.data-table-padding-gold-star{
+  padding: 0px 10px;
+}
+
+.dataTables_info{
+  padding: 0 !important;
+}
+
+.rm-wrap-text {
+  width: 200px;
+  word-wrap: break-word;
+  white-space: break-spaces;
+}
+
+.rm-client-logo-card-body {
+  position: absolute;
+  top: 0;
+}
+
+/* .loading {
+  background: #f4ded3 url('https://i.pinimg.com/originals/db/e6/b9/dbe6b90d0fd0d209001cb64eefd038d7.gif') no-repeat center center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-size: contain;
+  z-index: 9999999;
+} */
+
+
+/* .layout-navbar .navbar-nav, .layout-navbar .nav-item{
+  width: 100%;
+} */
+
+.rm-remove-created-question-icon {
+  position: absolute;
+  right: -9px;
+  top: -9px;
+  width: 32px;
+}
+
+
+.rm-edit-created-question-icon {
+  position: absolute;
+  right: 23px;
+  top: -9px;
+  width: 32px;
+}
+
+.rm-table-w-td-fixed td:nth-child(2),
+.rm-table-w-td-fixed td:nth-child(3) {
+  width: 50px;
+  white-space: break-spaces;
+}
+
+body {
+  animation: fadeInAnimation ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.rm-created-question-list-box {
+  overflow: auto;
+  height: calc(100vh - 206px);
+  padding: 20px 10px;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width:567px) {
+  .rm-client-logo-card-body {
+    position: static;
+    padding-top: 0;
+    margin-bottom: 20px;
+  }
+}

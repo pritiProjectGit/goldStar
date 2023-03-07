@@ -1,8 +1,56 @@
-<div class="container">
-  <div class="row">
-    <div class="card card-body">
-      <h1>Not Found</h1>
-      <a href="/express-mongodb-crud">volver</a>
-    </div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .rm-404-page-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    .rm-404-page-container img {
+      width: 350px;
+    }
+
+    .rm-page-not-found-text {
+      font-family: sans-serif;
+      font-size: 36px;
+      letter-spacing: 1px;
+      font-weight: 700;
+    }
+
+    .go-back-btn {
+      background-color: #c9a763;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 15px;
+      margin-top: 18px;
+      border-radius: 5px;
+      font-family: sans-serif;
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="rm-404-page-container">
+    <img src="/assets/img/404_not_found.svg" alt="404 not found" />
+    <span class="rm-page-not-found-text">404 Page Not Found</span>
+    <a class="go-back-btn" href="login">Go Back</a>
   </div>
-</div>
+</body>
+
+</html>

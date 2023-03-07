@@ -1,0 +1,62 @@
+{{#if tasks}}
+{{!-- <table class="table table-bordered table-hover table-dark">
+  <thead>
+    <tr>
+      <th>N°</th>
+      <th>Question Title</th>
+      <th>Question Answer</th>
+      <th>Operations</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each tasks}}
+    <tr>
+      <td>{{@index}}</td>
+      <td><strong>{{title}}</strong></td>
+      <td>{{description}}</td>
+      <td>
+        {{#if done}}
+        <a class="btn btn-success" href="/express-mongodb-crud/tasks/{{_id}}/toggleDone">Done</a>
+        {{else}}
+        <a class="btn btn-dark" href="/express-mongodb-crud/tasks/{{_id}}/toggleDone">
+          Undone
+        </a>
+        {{/if}}
+        <a href="/express-mongodb-crud/tasks/{{_id}}/delete" class="btn btn-danger">
+          Delete
+        </a>
+        <a href="/express-mongodb-crud/tasks/{{_id}}/edit" class="btn btn-info">
+          Edit
+        </a>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table> --}}
+<div id="createdQuestionCard" class="rm-created-question-list-box">
+  {{#each tasks}}
+  <div class="card rm-question-card mb-4">
+    <span class="question-count">Question {{sum @index 1}}</span>
+    <a href="/createQuestion/tasks/{{_id}}/delete">
+      <img src="/assets/img/remove.svg" class="rm-remove-created-question-icon" alt="delete" />
+    </a>
+    <a href="/createQuestion/tasks/{{_id}}/edit">
+      <img src="/assets/img/edit.svg" class="rm-edit-created-question-icon" alt="delete" />
+    </a>
+    <div class="card-body rm-card-question-body">
+      <h5 class="card-title" data-question={{title}}>{{title}}</h5>
+      <p class="card-text">
+        {{description}}
+      </p>
+    </div>
+  </div>
+  {{/each}}
+</div>
+{{else}}
+<div class="h-100 d-flex align-items-center justify-content-center">
+  <div class="text-center text-white mt-5">
+    <h2>No Question Created</h2>
+    <img src="/icons/empty.svg" class="w-50" />
+  </div>
+</div>
+{{/if}}

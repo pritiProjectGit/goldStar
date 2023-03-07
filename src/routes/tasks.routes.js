@@ -1,5 +1,9 @@
 import { Router } from "express";
 import {
+  renderViewQuestion,
+  renderCreatedQuestion,
+  renderDashboard,
+  renderLogin,
   createTask,
   deleteTask,
   renderTasks,
@@ -11,16 +15,37 @@ import {
 const router = Router();
 
 // Render all tasks
-router.get("/express-mongodb-crud", renderTasks);
+router.get("/login", renderLogin);
 
-router.post("/express-mongodb-crud/tasks/add", createTask);
+router.get("/dashboard", renderDashboard);
 
-router.get("/express-mongodb-crud/tasks/:id/toggleDone", taskToggleDone);
+router.get("/createdQuestion", renderCreatedQuestion);
 
-router.get("/express-mongodb-crud/tasks/:id/edit", renderTaskEdit);
+router.get("/viewQuestion", renderViewQuestion);
 
-router.post("/express-mongodb-crud/tasks/:id/edit", editTask);
+router.get("/createQuestion", renderTasks);
 
-router.get("/express-mongodb-crud/tasks/:id/delete", deleteTask);
+router.post("/createQuestion/tasks/add", createTask);
+
+router.get("/createQuestion/tasks/:id/toggleDone", taskToggleDone);
+
+router.get("/createQuestion/tasks/:id/edit", renderTaskEdit);
+
+router.post("/createQuestion/tasks/:id/edit", editTask);
+
+router.get("/createQuestion/tasks/:id/delete", deleteTask);
+
+
+// router.get("/login", loginTask);
+
+// router.get("/createQuestion", createQuestionByID);
+
+// router.get("/viewQuestion", viewQuestionByID);
+
+// router.get("/dashboard", dashboardByID);
+
+
+
+
 
 export default router;
